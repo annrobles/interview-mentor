@@ -14,6 +14,7 @@
 		70BD81512A3AB3B90046A36A /* interview_mentor.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70BD814F2A3AB3B90046A36A /* interview_mentor.xcdatamodeld */; };
 		70BD81532A3AB3BA0046A36A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BD81522A3AB3BA0046A36A /* Assets.xcassets */; };
 		70BD81562A3AB3BA0046A36A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BD81542A3AB3BA0046A36A /* LaunchScreen.storyboard */; };
+		70BD81612A3AB9F80046A36A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BD81602A3AB9F80046A36A /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		70BD81522A3AB3BA0046A36A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70BD81552A3AB3BA0046A36A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70BD81572A3AB3BA0046A36A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70BD81602A3AB9F80046A36A /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		70BD81452A3AB3B90046A36A /* interview-mentor */ = {
 			isa = PBXGroup;
 			children = (
+				70BD815D2A3AB8BF0046A36A /* Model */,
 				70BD81462A3AB3B90046A36A /* AppDelegate.swift */,
 				70BD81482A3AB3B90046A36A /* SceneDelegate.swift */,
 				70BD814A2A3AB3B90046A36A /* ViewController.swift */,
@@ -68,6 +71,14 @@
 				70BD814F2A3AB3B90046A36A /* interview_mentor.xcdatamodeld */,
 			);
 			path = "interview-mentor";
+			sourceTree = "<group>";
+		};
+		70BD815D2A3AB8BF0046A36A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70BD81602A3AB9F80046A36A /* Question.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70BD81612A3AB9F80046A36A /* Question.swift in Sources */,
 				70BD814B2A3AB3B90046A36A /* ViewController.swift in Sources */,
 				70BD81472A3AB3B90046A36A /* AppDelegate.swift in Sources */,
 				70BD81512A3AB3B90046A36A /* interview_mentor.xcdatamodeld in Sources */,
