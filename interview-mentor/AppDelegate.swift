@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        preloadData()
         return true
     }
 
@@ -30,6 +31,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    private func preloadData() {
+        let preloadDataKey = "didPreloadData"
+        
+        let userDefaults = UserDefaults.standard
+        
+        if userDefaults.bool(forKey: preloadDataKey) == false {
+            
+            guard let urlPath = Bundle.main.url(forResource: "Questions", withExtension: "plist") else {
+                return
+            }
+            
+            let backgroundContext = persistentContainer.newBackgroundContext()
+            persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+            
+            backgroundContext.perform {
+                
+                if let arrayContents = NSArray(contentsOf: urlPath) as? [String] {
+                    
+                    do {
+                        for questionTitle in arrayContents {
+                            let questionObject = QuestionEntity(context: backgroundContext)
+                            questionObject.title = questionTitle
+                        }
+                        
+                        try backgroundContext.save()
+                        
+                        userDefaults.set(true, forKey: preloadDataKey)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        }
     }
 
     // MARK: - Core Data stack
