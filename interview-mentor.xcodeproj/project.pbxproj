@@ -51,6 +51,22 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		70A070002A4142B00081BCC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70BD814C2A3AB3B90046A36A /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70A070012A4142B60081BCC8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70BD814A2A3AB3B90046A36A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		70BD813A2A3AB3B90046A36A = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +86,12 @@
 		70BD81452A3AB3B90046A36A /* interview-mentor */ = {
 			isa = PBXGroup;
 			children = (
+				70A070012A4142B60081BCC8 /* Controller */,
+				70A070002A4142B00081BCC8 /* View */,
 				7065AFBA2A3C11B8002CB325 /* Data */,
 				70BD815D2A3AB8BF0046A36A /* Model */,
 				70BD81462A3AB3B90046A36A /* AppDelegate.swift */,
 				70BD81482A3AB3B90046A36A /* SceneDelegate.swift */,
-				70BD814A2A3AB3B90046A36A /* ViewController.swift */,
-				70BD814C2A3AB3B90046A36A /* Main.storyboard */,
 				70BD81522A3AB3BA0046A36A /* Assets.xcassets */,
 				70BD81542A3AB3BA0046A36A /* LaunchScreen.storyboard */,
 				70BD81572A3AB3BA0046A36A /* Info.plist */,
