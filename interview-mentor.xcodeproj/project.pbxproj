@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7065AFBC2A3C11D5002CB325 /* Questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7065AFBB2A3C11D5002CB325 /* Questions.plist */; };
+		70A070032A55113C0081BCC8 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A070022A55113C0081BCC8 /* QuestionViewController.swift */; };
 		70BD81472A3AB3B90046A36A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BD81462A3AB3B90046A36A /* AppDelegate.swift */; };
 		70BD81492A3AB3B90046A36A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BD81482A3AB3B90046A36A /* SceneDelegate.swift */; };
 		70BD814B2A3AB3B90046A36A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BD814A2A3AB3B90046A36A /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		7065AFBB2A3C11D5002CB325 /* Questions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Questions.plist; sourceTree = "<group>"; };
+		70A070022A55113C0081BCC8 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		70BD81432A3AB3B90046A36A /* interview-mentor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interview-mentor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BD81462A3AB3B90046A36A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70BD81482A3AB3B90046A36A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				70BD814A2A3AB3B90046A36A /* ViewController.swift */,
+				70A070022A55113C0081BCC8 /* QuestionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			files = (
 				70BD81612A3AB9F80046A36A /* Question.swift in Sources */,
 				70BD814B2A3AB3B90046A36A /* ViewController.swift in Sources */,
+				70A070032A55113C0081BCC8 /* QuestionViewController.swift in Sources */,
 				70BD81472A3AB3B90046A36A /* AppDelegate.swift in Sources */,
 				70BD81512A3AB3B90046A36A /* interview_mentor.xcdatamodeld in Sources */,
 				70BD81492A3AB3B90046A36A /* SceneDelegate.swift in Sources */,

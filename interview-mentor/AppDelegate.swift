@@ -52,8 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if let arrayContents = NSArray(contentsOf: urlPath) as? [String] {
                     
                     do {
+                        var cnt = 0
                         for questionTitle in arrayContents {
+                            cnt = cnt + 1
                             let questionObject = QuestionEntity(context: backgroundContext)
+                            questionObject.id = Int16(cnt)
                             questionObject.title = questionTitle
                         }
                         

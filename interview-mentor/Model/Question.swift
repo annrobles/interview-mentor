@@ -10,9 +10,11 @@ import UIKit
 struct Question {
     
     var title: String
+    var id: Int
     
-    init(title: String) {
+    init(title: String, id: Int) {
         self.title = title
+        self.id = id
     }
     
 }
