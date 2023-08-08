@@ -49,13 +49,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkV-dH-oh1">
+                                <rect key="frame" x="163" y="753" width="68" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="NEXT"/>
+                                <connections>
+                                    <action selector="nextClicked:" destination="euF-qv-J2l" eventType="touchUpInside" id="Kcd-ed-dNs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uNj-DB-rd2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eiG-PR-JOb" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="16" id="C7O-a2-WSK"/>
-                            <constraint firstItem="eiG-PR-JOb" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="38" id="Oo4-9X-muQ"/>
-                            <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="eiG-PR-JOb" secondAttribute="trailing" constant="16" id="yWC-Ts-FJh"/>
+                            <constraint firstItem="eiG-PR-JOb" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="38" id="6CO-3G-Awx"/>
+                            <constraint firstItem="uNj-DB-rd2" firstAttribute="bottom" secondItem="TkV-dH-oh1" secondAttribute="bottom" constant="30" id="8RJ-9u-1MF"/>
+                            <constraint firstItem="eiG-PR-JOb" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="16" id="HaB-AE-cMx"/>
+                            <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="TkV-dH-oh1" secondAttribute="trailing" constant="162" id="aVn-Pm-Bgb"/>
+                            <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="eiG-PR-JOb" secondAttribute="trailing" constant="16" id="y7o-R7-Pqf"/>
+                            <constraint firstItem="TkV-dH-oh1" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="163" id="yw9-J0-yjx"/>
                         </constraints>
                     </view>
                     <connections>

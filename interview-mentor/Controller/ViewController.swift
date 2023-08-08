@@ -50,6 +50,7 @@ class ViewController: UIViewController {
             
             questionViewController.questionNum = 1
             questionViewController.currentQuestion = questions[0]
+            questionViewController.questions = self.questions
         }
     }
 }
