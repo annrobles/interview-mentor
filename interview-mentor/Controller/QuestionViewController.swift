@@ -29,6 +29,7 @@ class QuestionViewController: UIViewController, AVSpeechSynthesizerDelegate {
         questionLabel.text = "\(currentQuestion.title)"
         questionLabel.numberOfLines = 0
 
+        self.micClicked(self.micIconOutlet)
     }
 
     @IBAction func micClicked(_ sender: UIButton) {
