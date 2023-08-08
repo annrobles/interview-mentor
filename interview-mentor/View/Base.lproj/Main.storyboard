@@ -43,8 +43,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzf-sS-Ycf">
+                                <rect key="frame" x="16" y="137" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiG-PR-JOb">
-                                <rect key="frame" x="16" y="97" width="361" height="21"/>
+                                <rect key="frame" x="58" y="137" width="319" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,25 +63,39 @@
                                     <action selector="nextClicked:" destination="euF-qv-J2l" eventType="touchUpInside" id="Kcd-ed-dNs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFW-Oc-BHh">
+                                <rect key="frame" x="331" y="83" width="46" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="mic.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="micClicked:" destination="euF-qv-J2l" eventType="touchUpInside" id="HCS-XK-ooI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uNj-DB-rd2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eiG-PR-JOb" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="38" id="6CO-3G-Awx"/>
+                            <constraint firstItem="eiG-PR-JOb" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="78" id="6CO-3G-Awx"/>
+                            <constraint firstItem="xzf-sS-Ycf" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="16" id="6gP-ef-TC1"/>
                             <constraint firstItem="uNj-DB-rd2" firstAttribute="bottom" secondItem="TkV-dH-oh1" secondAttribute="bottom" constant="30" id="8RJ-9u-1MF"/>
-                            <constraint firstItem="eiG-PR-JOb" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="16" id="HaB-AE-cMx"/>
+                            <constraint firstItem="TFW-Oc-BHh" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="24" id="EGV-Vu-Cl0"/>
                             <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="TkV-dH-oh1" secondAttribute="trailing" constant="162" id="aVn-Pm-Bgb"/>
+                            <constraint firstItem="eiG-PR-JOb" firstAttribute="leading" secondItem="xzf-sS-Ycf" secondAttribute="trailing" id="bSP-8d-LTb"/>
+                            <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="TFW-Oc-BHh" secondAttribute="trailing" constant="16" id="fgk-7i-7nj"/>
+                            <constraint firstItem="xzf-sS-Ycf" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="78" id="uMy-xh-dwy"/>
                             <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="eiG-PR-JOb" secondAttribute="trailing" constant="16" id="y7o-R7-Pqf"/>
                             <constraint firstItem="TkV-dH-oh1" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="163" id="yw9-J0-yjx"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="micIconOutlet" destination="TFW-Oc-BHh" id="oPF-fl-ZFt"/>
                         <outlet property="questionLabel" destination="eiG-PR-JOb" id="lHV-Pm-kjp"/>
+                        <outlet property="questionNumber" destination="xzf-sS-Ycf" id="WSq-WM-eh0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGE-Rr-3PP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1506" y="-275"/>
+            <point key="canvasLocation" x="1434" y="-295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fa4-Ef-G2Q">
@@ -97,6 +117,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mic.fill" catalog="system" width="110" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
