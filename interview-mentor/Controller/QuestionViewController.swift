@@ -8,17 +8,25 @@
 import UIKit
 import AVFoundation
 
-class QuestionViewController: UIViewController, AVSpeechSynthesizerDelegate {
+class QuestionViewController: UIViewController, AVSpeechSynthesizerDelegate, AVAudioPlayerDelegate,  AVAudioRecorderDelegate {
 
     @IBOutlet weak var questionNumber: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var micIconOutlet: UIButton!
+    @IBOutlet weak var recordAudioButton: UIButton!
     
     var questionNum = 0
     var currentQuestion = Question(title: "", id: -1)
     var questions = [Question]()
+    
     var isMicOn = false
     let synthesizer = AVSpeechSynthesizer()
+    
+    var soundURL: String?
+    var audioPath: [String] = []
+    var newAudioPath: [String] = []
+    var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +47,7 @@ class QuestionViewController: UIViewController, AVSpeechSynthesizerDelegate {
         if let speechText = questionLabel.text {
             
             isMicOn = !isMicOn
-            print(#function, isMicOn)
+
             if isMicOn {
                 let speech = AVSpeechUtterance(string: speechText)
                 synthesizer.speak(speech)
@@ -62,6 +70,10 @@ class QuestionViewController: UIViewController, AVSpeechSynthesizerDelegate {
             questionViewController.questionNum = self.questionNum + 1
             
         }
+    }
+    
+    @IBAction func recordAnswerClicked(_ sender: UIButton) {
+        recordTapped()
     }
     
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {

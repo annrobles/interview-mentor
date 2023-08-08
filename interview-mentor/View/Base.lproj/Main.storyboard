@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiG-PR-JOb">
-                                <rect key="frame" x="57.333333333333371" y="137" width="319.66666666666663" height="21"/>
+                                <rect key="frame" x="57.333333333333343" y="137" width="319.66666666666663" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -71,6 +71,14 @@
                                     <action selector="micClicked:" destination="euF-qv-J2l" eventType="touchUpInside" id="HCS-XK-ooI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQV-Sz-DXs">
+                                <rect key="frame" x="94" y="218" width="206" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="mic" catalog="system" title="Tap to record answer"/>
+                                <connections>
+                                    <action selector="recordAnswerClicked:" destination="euF-qv-J2l" eventType="touchUpInside" id="iGQ-Um-SiB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uNj-DB-rd2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,6 +87,9 @@
                             <constraint firstItem="xzf-sS-Ycf" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="16" id="6gP-ef-TC1"/>
                             <constraint firstItem="uNj-DB-rd2" firstAttribute="bottom" secondItem="TkV-dH-oh1" secondAttribute="bottom" constant="30" id="8RJ-9u-1MF"/>
                             <constraint firstItem="TFW-Oc-BHh" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="24" id="EGV-Vu-Cl0"/>
+                            <constraint firstItem="qQV-Sz-DXs" firstAttribute="top" secondItem="eiG-PR-JOb" secondAttribute="bottom" constant="60" id="O3t-Vg-5o8"/>
+                            <constraint firstItem="qQV-Sz-DXs" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="94" id="Pwa-B6-j27"/>
+                            <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="qQV-Sz-DXs" secondAttribute="trailing" constant="93" id="QoQ-Uh-xCK"/>
                             <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="TkV-dH-oh1" secondAttribute="trailing" constant="162" id="aVn-Pm-Bgb"/>
                             <constraint firstItem="eiG-PR-JOb" firstAttribute="leading" secondItem="xzf-sS-Ycf" secondAttribute="trailing" id="bSP-8d-LTb"/>
                             <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="TFW-Oc-BHh" secondAttribute="trailing" constant="16" id="fgk-7i-7nj"/>
@@ -91,6 +102,7 @@
                         <outlet property="micIconOutlet" destination="TFW-Oc-BHh" id="oPF-fl-ZFt"/>
                         <outlet property="questionLabel" destination="eiG-PR-JOb" id="lHV-Pm-kjp"/>
                         <outlet property="questionNumber" destination="xzf-sS-Ycf" id="WSq-WM-eh0"/>
+                        <outlet property="recordAudioButton" destination="qQV-Sz-DXs" id="Psq-3F-c9i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGE-Rr-3PP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -117,6 +129,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="mic" catalog="system" width="110" height="128"/>
         <image name="mic.fill" catalog="system" width="110" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
