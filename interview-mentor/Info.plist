@@ -21,5 +21,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>You can view a text transcription of your meeting in the app.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.</string>
 </dict>
 </plist>

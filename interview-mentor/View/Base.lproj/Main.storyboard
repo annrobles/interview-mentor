@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cIr-RN-OTg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cIr-RN-OTg">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,15 +45,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzf-sS-Ycf">
-                                <rect key="frame" x="16.000000000000004" y="137" width="41.333333333333343" height="21"/>
+                                <rect key="frame" x="16.000000000000004" y="79" width="41.333333333333343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiG-PR-JOb">
-                                <rect key="frame" x="57.333333333333343" y="137" width="319.66666666666663" height="21"/>
+                                <rect key="frame" x="57.333333333333343" y="79" width="319.66666666666663" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer displays here..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3v-zl-rEw">
+                                <rect key="frame" x="40" y="136" width="337" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TkV-dH-oh1">
@@ -64,17 +71,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFW-Oc-BHh">
-                                <rect key="frame" x="331" y="83" width="46" height="35"/>
+                                <rect key="frame" x="16.000000000000004" y="783" width="58.333333333333343" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="mic.fill" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="speaker.wave.3.fill" catalog="system"/>
                                 <connections>
                                     <action selector="micClicked:" destination="euF-qv-J2l" eventType="touchUpInside" id="HCS-XK-ooI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQV-Sz-DXs">
-                                <rect key="frame" x="94" y="218" width="206" height="35"/>
+                                <rect key="frame" x="331" y="783" width="46" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="mic" catalog="system" title="Tap to record answer"/>
+                                <buttonConfiguration key="configuration" style="plain" image="mic.fill" catalog="system"/>
                                 <connections>
                                     <action selector="recordAnswerClicked:" destination="euF-qv-J2l" eventType="touchUpInside" id="iGQ-Um-SiB"/>
                                 </connections>
@@ -83,17 +90,19 @@
                         <viewLayoutGuide key="safeArea" id="uNj-DB-rd2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eiG-PR-JOb" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="78" id="6CO-3G-Awx"/>
+                            <constraint firstItem="eiG-PR-JOb" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="20" id="6CO-3G-Awx"/>
                             <constraint firstItem="xzf-sS-Ycf" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="16" id="6gP-ef-TC1"/>
                             <constraint firstItem="uNj-DB-rd2" firstAttribute="bottom" secondItem="TkV-dH-oh1" secondAttribute="bottom" constant="30" id="8RJ-9u-1MF"/>
-                            <constraint firstItem="TFW-Oc-BHh" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="24" id="EGV-Vu-Cl0"/>
-                            <constraint firstItem="qQV-Sz-DXs" firstAttribute="top" secondItem="eiG-PR-JOb" secondAttribute="bottom" constant="60" id="O3t-Vg-5o8"/>
-                            <constraint firstItem="qQV-Sz-DXs" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="94" id="Pwa-B6-j27"/>
-                            <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="qQV-Sz-DXs" secondAttribute="trailing" constant="93" id="QoQ-Uh-xCK"/>
+                            <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="P3v-zl-rEw" secondAttribute="trailing" constant="16" id="BDv-23-O5i"/>
+                            <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="qQV-Sz-DXs" secondAttribute="trailing" constant="16" id="DNv-Y7-ebJ"/>
+                            <constraint firstItem="P3v-zl-rEw" firstAttribute="top" secondItem="eiG-PR-JOb" secondAttribute="bottom" constant="36" id="Veo-8I-Mk4"/>
+                            <constraint firstItem="uNj-DB-rd2" firstAttribute="bottom" secondItem="qQV-Sz-DXs" secondAttribute="bottom" id="WoN-mG-6TX"/>
                             <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="TkV-dH-oh1" secondAttribute="trailing" constant="162" id="aVn-Pm-Bgb"/>
                             <constraint firstItem="eiG-PR-JOb" firstAttribute="leading" secondItem="xzf-sS-Ycf" secondAttribute="trailing" id="bSP-8d-LTb"/>
-                            <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="TFW-Oc-BHh" secondAttribute="trailing" constant="16" id="fgk-7i-7nj"/>
-                            <constraint firstItem="xzf-sS-Ycf" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="78" id="uMy-xh-dwy"/>
+                            <constraint firstItem="uNj-DB-rd2" firstAttribute="bottom" secondItem="TFW-Oc-BHh" secondAttribute="bottom" id="ieh-EF-7dL"/>
+                            <constraint firstItem="TFW-Oc-BHh" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="16" id="kaT-m8-FFd"/>
+                            <constraint firstItem="P3v-zl-rEw" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="40" id="oFu-2j-1aC"/>
+                            <constraint firstItem="xzf-sS-Ycf" firstAttribute="top" secondItem="uNj-DB-rd2" secondAttribute="top" constant="20" id="uMy-xh-dwy"/>
                             <constraint firstItem="uNj-DB-rd2" firstAttribute="trailing" secondItem="eiG-PR-JOb" secondAttribute="trailing" constant="16" id="y7o-R7-Pqf"/>
                             <constraint firstItem="TkV-dH-oh1" firstAttribute="leading" secondItem="uNj-DB-rd2" secondAttribute="leading" constant="163" id="yw9-J0-yjx"/>
                         </constraints>
@@ -103,11 +112,12 @@
                         <outlet property="questionLabel" destination="eiG-PR-JOb" id="lHV-Pm-kjp"/>
                         <outlet property="questionNumber" destination="xzf-sS-Ycf" id="WSq-WM-eh0"/>
                         <outlet property="recordAudioButton" destination="qQV-Sz-DXs" id="Psq-3F-c9i"/>
+                        <outlet property="responseTextView" destination="P3v-zl-rEw" id="iCR-n5-glQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eGE-Rr-3PP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="-295"/>
+            <point key="canvasLocation" x="1432.824427480916" y="-295.07042253521126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fa4-Ef-G2Q">
@@ -129,8 +139,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mic" catalog="system" width="110" height="128"/>
         <image name="mic.fill" catalog="system" width="110" height="128"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="128" height="84"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
